@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${EXAMPLE}"
-      - run: echo "${EXAMPLE}"
+      - run: echo "${EXAMPLE}" # runステップが実行される時点でenvセクションの設定が適用されるため、期待通りに変数が上書きされる
         env:
           EXAMPLE: steps level
